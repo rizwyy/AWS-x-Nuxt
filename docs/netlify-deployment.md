@@ -21,30 +21,30 @@ The first deployment is only used to obtain the final hostname. Cognito login wi
 
 ## Connect the production hostname
 
-Assume Netlify assigned `https://atlas-knowledge.netlify.app`. Use your actual URL everywhere below, without a trailing slash.
+The deployed production URL is `https://atlas-rag.netlify.app`. Use it everywhere below, without a trailing slash.
 
 ### Netlify environment variables
 
 Change both values and redeploy:
 
 ```text
-NUXT_PUBLIC_COGNITO_REDIRECT_URI=https://atlas-knowledge.netlify.app
-NUXT_PUBLIC_COGNITO_LOGOUT_URI=https://atlas-knowledge.netlify.app
+NUXT_PUBLIC_COGNITO_REDIRECT_URI=https://atlas-rag.netlify.app
+NUXT_PUBLIC_COGNITO_LOGOUT_URI=https://atlas-rag.netlify.app
 ```
 
 ### Cognito app client
 
 Keep localhost for development and add the production URL to both lists:
 
-- Allowed callback URLs: `http://localhost:3000`, `https://atlas-knowledge.netlify.app`
-- Allowed sign-out URLs: `http://localhost:3000`, `https://atlas-knowledge.netlify.app`
+- Allowed callback URLs: `http://localhost:3000`, `https://atlas-rag.netlify.app`
+- Allowed sign-out URLs: `http://localhost:3000`, `https://atlas-rag.netlify.app`
 
 ### API Gateway CORS
 
 Allowed origins:
 
 - `http://localhost:3000`
-- `https://atlas-knowledge.netlify.app`
+- `https://atlas-rag.netlify.app`
 
 Keep methods `GET`, `POST`, `OPTIONS` and headers `authorization`, `content-type`.
 
@@ -57,7 +57,7 @@ Add the Netlify hostname to `AllowedOrigins`:
   {
     "AllowedHeaders": ["content-type", "x-amz-meta-owner", "x-amz-meta-document-id"],
     "AllowedMethods": ["PUT"],
-    "AllowedOrigins": ["http://localhost:3000", "https://atlas-knowledge.netlify.app"],
+    "AllowedOrigins": ["http://localhost:3000", "https://atlas-rag.netlify.app"],
     "ExposeHeaders": ["ETag"],
     "MaxAgeSeconds": 300
   }

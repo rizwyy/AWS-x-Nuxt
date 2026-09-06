@@ -4,6 +4,11 @@
 [build.environment]
   NODE_VERSION = "24"
   NPM_FLAGS = "--legacy-peer-deps"
+  NUXT_PUBLIC_API_BASE = "https://6vnoteuva5.execute-api.us-east-1.amazonaws.com/dev"
+  NUXT_PUBLIC_COGNITO_DOMAIN = "https://us-east-1fnlw9cio1.auth.us-east-1.amazoncognito.com"
+  NUXT_PUBLIC_COGNITO_CLIENT_ID = "6blpnr1pl4062bmvh91pbggos1"
+  NUXT_PUBLIC_COGNITO_REDIRECT_URI = "https://atlas-rag.netlify.app"
+  NUXT_PUBLIC_COGNITO_LOGOUT_URI = "https://atlas-rag.netlify.app"
 
 [[headers]]
   for = "/*"
