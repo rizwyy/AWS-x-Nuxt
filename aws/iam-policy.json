@@ -1,0 +1,9 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {"Sid":"BedrockRetrieval","Effect":"Allow","Action":["bedrock:AgenticRetrieveStream","bedrock:Retrieve","bedrock:GetDocumentContent","bedrock:InvokeModelWithResponseStream"],"Resource":"*"},
+    {"Sid":"BedrockIngestion","Effect":"Allow","Action":["bedrock:StartIngestionJob","bedrock:GetIngestionJob"],"Resource":"*"},
+    {"Sid":"DocumentObjects","Effect":"Allow","Action":["s3:GetObject","s3:PutObject"],"Resource":"arn:aws:s3:::REPLACE_BUCKET_NAME/*"},
+    {"Sid":"ConversationTable","Effect":"Allow","Action":["dynamodb:GetItem","dynamodb:PutItem","dynamodb:UpdateItem","dynamodb:Query"],"Resource":"arn:aws:dynamodb:us-east-1:REPLACE_ACCOUNT_ID:table/atlas-app-dev"}
+  ]
+}
