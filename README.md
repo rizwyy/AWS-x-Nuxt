@@ -25,6 +25,8 @@ Open the local address printed by Nuxt. `npm run build` creates a Node deploymen
 
 The app is connected to the development Cognito and API Gateway environment. The deployable Lambda package supports chat, citations, presigned S3 uploads, Knowledge Base ingestion, per-user metadata filters, DynamoDB conversation history, feedback, and metrics. Follow [docs/finish-today.md](docs/finish-today.md) to add the remaining AWS routes and resources.
 
+For public frontend hosting, follow [docs/netlify-deployment.md](docs/netlify-deployment.md). The project includes a Netlify build configuration and security headers.
+
 The Nuxt 4 app structure follows https://nuxt.com/docs/4.x/directory-structure/app/app.
 
 ## AWS handoff
